@@ -73,7 +73,6 @@ func initializeClickHouseRepository() (domain.AuthorRepository, context.Context)
 	if err != nil {
 		panic("failed to connect with : " + err.Error())
 	}
-	defer conn.Close()
 
 	ctx := clickhouse.Context(context.Background(), clickhouse.WithSettings(clickhouse.Settings{
 		"max_block_size": 10,
