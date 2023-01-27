@@ -9,6 +9,7 @@ docker run -d --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=123456 -v postgr
 
 ## step 3
 //repo, ctx := initializeClickHouseRepository()
+
 repo, ctx := initializePostgresRepository()
 
 ## step 4
